@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom'
 import Example2 from './Example2';
 
 const routing = (
   <Router>
-    <div>
-      <Route path="/" component={App} exact/>
+    <Switch>
+      <Redirect from="/" to="/example1" exact />
+      <Route path="/example1" component={App} exact/>
       <Route path="/example2" component={ Example2 } />
-    </div>
+    </Switch>
   </Router>
 )
 
