@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormInfo from './FormInfo';
+import FormContainer from './FormContainer';
 import FormContext from './api-context';
 
 class Example2 extends Component {
@@ -33,11 +33,9 @@ class Example2 extends Component {
             changeName: this.changeName,
             clearValue: this.clearValue
           }}>
-          {/* <Form.Consumer> */}
             <div className="border border-primary m-5 p-5">
-              <FormInfo />
+              <FormContainer/>
             </div>
-          {/* </Form.Consumer> */}
         </FormContext.Provider>
       </React.Fragment>
     )
